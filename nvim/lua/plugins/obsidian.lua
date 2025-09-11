@@ -10,11 +10,11 @@ return {
 		workspaces = {
 			{
 				name = "personal",
-				path = "~/e/Documents/Obsidian Vault",
+				path = "~/Documents/obsidian-vault",
 			},
 			{
 				name = "work",
-				path = "~/f/vaults/work",
+				path = "~/Documents/obsidian-vault-work",
 			},
 		},
 		ui = { enable = false },

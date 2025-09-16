@@ -245,7 +245,7 @@ threshold = 20
 style = "italic bold red"
 
 [[battery.display]]
-threshold = 100
+threshold = 95
 style = "italic dimmed bright-purple"
 
 [[battery.display]]

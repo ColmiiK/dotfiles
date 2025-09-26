@@ -126,3 +126,37 @@ vim.api.nvim_create_autocmd("FileType", {
 		)
 	end,
 })
+
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "html",
+	callback = function(event)
+
+    ------------
+    --- html ---
+    ------------
+		vim.api.nvim_buf_set_keymap( event.buf, "n", "<leader>oc", "<Esc>:LivePreview close<CR>", { noremap = true, silent = true, desc = "Close LivePreview" })
+		vim.api.nvim_buf_set_keymap( event.buf, "n", "<leader>os", "<Esc>:LivePreview start<CR>", { noremap = true, silent = true, desc = "Sync file in browser" })
+		vim.api.nvim_buf_set_keymap( event.buf, "n", "<leader>of", "<Esc>:lua vim.ui.open(vim.fn.expand('%'))<CR>", { noremap = true, silent = true, desc = "Open file in browser" })
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function(event)
+
+    ---------------------
+    --- obsidian.nvim ---
+    ---------------------
+    vim.api.nvim_set_keymap( "n", "<leader>oo", "<Esc>:ObsidianOpen<CR>", { noremap = true, silent = true, desc = "Open in Obsidian App" })
+    vim.api.nvim_set_keymap( "n", "<leader>on", "<Esc>:ObsidianNew ", { noremap = true, silent = true, desc = "New note" })
+    vim.api.nvim_set_keymap( "n", "<leader>ot", "<Esc>:ObsidianToday<CR>", { noremap = true, silent = true, desc = "New today note" })
+    vim.api.nvim_set_keymap( "n", "<leader>of", "<Esc>:ObsidianFollowLink<CR>", { noremap = true, silent = true, desc = "Go to note" })
+
+    ----------------
+    --- markdown ---
+    ----------------
+    vim.api.nvim_set_keymap( "n", "<leader>cb", "o```<CR>```<Esc>kA", { noremap = true, silent = true, desc = "Insert Markdown code block" })
+	end,
+})
+

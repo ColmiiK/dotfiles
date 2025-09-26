@@ -15,42 +15,4 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
-----------------
---- Markdown ---
-----------------
 
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>cb",
-	"o```<CR>```<Esc>kA",
-	{ noremap = true, silent = true, desc = "Insert Markdown code block" }
-)
-
----------------------
---- obsidian.nvim ---
----------------------
-
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>oo",
-	"<Esc>:ObsidianOpen<CR>",
-	{ noremap = true, silent = true, desc = "Open in Obsidian App" }
-)
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>on",
-	"<Esc>:ObsidianNew ",
-	{ noremap = true, silent = true, desc = "New note" }
-)
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>ot",
-	"<Esc>:ObsidianToday<CR>",
-	{ noremap = true, silent = true, desc = "New today note" }
-)
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>of",
-	"<Esc>:ObsidianFollowLink<CR>",
-	{ noremap = true, silent = true, desc = "Go to note" }
-)
